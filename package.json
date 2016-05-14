@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "web calculator ",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "jquery": "^2.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

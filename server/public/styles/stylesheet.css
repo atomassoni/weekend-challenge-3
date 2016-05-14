@@ -1,0 +1,15 @@
+body {
+  background-color: peachpuff;
+}
+
+#operator {
+  height:75px;
+  font-size: 60px;
+  padding:5px;
+}
+#result
+{
+  height:75px;
+  font-size: 60px;
+  padding:5px;
+}
