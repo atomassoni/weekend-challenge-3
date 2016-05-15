@@ -2,13 +2,7 @@ body {
   background-color: peachpuff;
 }
 
-#operator {
-  height:75px;
-  font-size: 60px;
-  padding:5px;
-}
-#result
-{
+#display-number1, #display-number2, #display-operator {
   height:75px;
   font-size: 60px;
   padding:5px;
