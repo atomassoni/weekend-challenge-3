@@ -16,12 +16,13 @@ var currentNumber = 1;
 $(document).ready(function() {
     console.log('ready');
 
-
+    //Allows for inputs to be changed with the buttons
     $('#calculator-container').on('click', 'button', calculatorButtons);
 
-    $('#number1').on('keyup', updateNum);
-    $('#number2').on('keyup', updateNum);
+    //Allows for inputs to be changed with the keyboard
+    $('#number').on('keyup', updateNum);
 
+    //Pressed buttons run functions
     $('#calc-input').on('submit', getResult);
     $('#clear').on('click', clearAllNumbers);
     $('#clear-input').on('click', clearInputOnly);
@@ -52,6 +53,7 @@ $(document).ready(function() {
 
     }
 
+    //Changes the input number when each number is pressed on the keyboard
     function updateNum() {
 
         if (currentNumber == 1) {
@@ -62,7 +64,7 @@ $(document).ready(function() {
     }
 
 
-
+    //Goes to the server to get some results
     function getResult() {
         event.preventDefault();
         if (checkData()) {
@@ -85,7 +87,7 @@ $(document).ready(function() {
     }
 
 
-
+    //Clear function for resetting numbers and fields
     function resetNumbers(num) {
         number1 = num;
         number2 = '';
@@ -98,11 +100,13 @@ $(document).ready(function() {
 
     }
 
+    //Clears all fields and resets experience
     function clearAllNumbers() {
         resetNumbers('');
 
     }
 
+    //Only clears the input the user is working on
     function clearInputOnly() {
         if (currentNumber==1) {
             resetNumbers('');
@@ -112,6 +116,7 @@ $(document).ready(function() {
         }
     }
 
+    //checks to see if the user has set all the inputs
     function checkData() {
         if (number1 != '' && number2 != '' && operator != '') {
             return true;
